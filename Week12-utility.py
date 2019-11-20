@@ -1,6 +1,6 @@
 # Jonathon Kastner
 # CSCI 102 - Section C
-# Week 12 - Part B
+# Week 12 - Part A/B
 
 def PrintOutput(string):
     print('OUTPUT', string)
@@ -50,8 +50,9 @@ def Intersection(list1, list2):
             new_list.append(element)
     return new_list
 
-
-players = ["Mary", "Cody", "Joe", "Jill", "Xai", "Bodo"]
-scores = [5, 8, 10, 6, 10, 4]
-players2 = ["Melvin", "Martian", "Baka", "Xai", "Cody"]
-print("OUTPUT", Intersection(players, players2))
+def NotIn(list1, list2):
+    new_list = []
+    for element in list1:
+        if element not in list2:
+            new_list.append(element)
+    return new_list
