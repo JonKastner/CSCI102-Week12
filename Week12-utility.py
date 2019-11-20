@@ -5,4 +5,13 @@
 def PrintOutput(string):
     print('OUTPUT', string)
 
-PrintOutput('Hello World')
+def LoadFile(filename):
+    f = open(filename)
+    lines = []
+    for line in f:
+        lines.append(str.strip(line))
+    f.close()
+    return lines
+
+lines = LoadFile('test.txt')
+print('OUTPUT',lines)
