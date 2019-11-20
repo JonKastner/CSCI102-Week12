@@ -19,5 +19,12 @@ def UpdateString(string1, string2, index):
     new_string = "".join(my_list)
     print('OUTPUT',new_string)
 
+def FindWordCount(the_list, string):
+    count = 0
+    for line in the_list:
+        count += line.count(string)
+    return count
 
-UpdateString("Hello World", "a", 3)
+
+t = LoadFile('test.txt')
+PrintOutput(str(FindWordCount(t, 'Test')))
