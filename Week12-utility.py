@@ -33,7 +33,20 @@ def ScoreFinder(names, scores, target):
     else:
         print('OUTPUT player not found')
 
+def Union(list1, list2):
+    new_list = []
+    for element in list1:
+        if element not in new_list:
+            new_list.append(element)
+    for element in list2:
+        if element not in new_list:
+            new_list.append(element)
+    return new_list
+
+
+
 
 players = ["Mary", "Cody", "Joe", "Jill", "Xai", "Bodo"]
 scores = [5, 8, 10, 6, 10, 4]
-ScoreFinder(players, scores, "jill")
+players2 = ["Melvin", "Martian", "Baka", "Xai", "Cody"]
+print("OUTPUT", Union(scores, players2))
