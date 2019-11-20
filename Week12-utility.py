@@ -13,5 +13,11 @@ def LoadFile(filename):
     f.close()
     return lines
 
-lines = LoadFile('test.txt')
-print('OUTPUT',lines)
+def UpdateString(string1, string2, index):
+    my_list = list(string1)
+    my_list[index] = string2
+    new_string = "".join(my_list)
+    print('OUTPUT',new_string)
+
+
+UpdateString("Hello World", "a", 3)
